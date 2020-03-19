@@ -3,8 +3,9 @@
 .button {
     font-size: 16px;
     padding: 10px 60px;
-    border: 2px solid $color-green;
-    background-color: $color-gray;
+    border-radius: 5px;
+    background: none;
+    border: none;
     margin: 10px 0px;
     cursor: pointer;
     transition: background-color 0.1s linear, color 0.1s linear,
@@ -12,23 +13,27 @@
 }
 
 .button--primary {
-    border: 2px solid transparent;  
+    background-color: $button-theme-blue-default;
+    color: $button-theme-blue-highlight;
     &:hover {
-        border-color: $color-green;
+        background-color: $button-theme-blue-hover;
     }
 }
 
 .button--secondary {
-    background: none;
+    border: 2px solid;
+    border-color: $button-theme-blue-default;
+    color: $button-theme-blue-default;
     &:hover {
-        background: $color-gray;
+        border-color: $button-theme-blue-hover;
+        color: $button-theme-blue-hover;
     }
 }
 
 .button--tertiary {
-    border: 2px solid transparent;
-    background: none;
+    color: $button-theme-blue-default;
+    padding: 0;
     &:hover {
-        border-bottom: 2px solid $color-green;
+        color: $button-theme-blue-hover;
     }
 }
